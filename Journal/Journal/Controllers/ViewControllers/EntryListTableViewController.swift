@@ -11,6 +11,7 @@ class EntryListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        EntryController.shared.loadFromPersistentStorage()
 
     }
     

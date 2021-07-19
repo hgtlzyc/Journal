@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Entry {
+class Entry: Codable {
     
     let title: String
     let text: String
@@ -30,3 +30,4 @@ extension Entry: Equatable {
     }
     
 }
+
