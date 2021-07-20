@@ -15,6 +15,7 @@ class EntryDetailViewController: UIViewController {
     
     // MARK: - Vars
     var entry: Entry?
+    var journal: Journal?
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -42,12 +43,18 @@ class EntryDetailViewController: UIViewController {
             navigationController?.popViewController(animated: true)
         }
         
-        if let _ = entry {
-            print("to be implemented tomorrow")
-        } else {
-            guard let title =  titleTextField.text,
-                  let body = bodyTextView.text else { return }
-            EntryController.shared.createEntryWith(title: title, body: body)
+        guard let title =  titleTextField.text,
+              let body = bodyTextView.text else { return }
+        
+        switch (entry, journal) {
+        case let ( nil, journal? ):
+            EntryController.createEntryWith(title: title, body: body, in: journal)
+            
+        case let ( entry?, _? ):
+            EntryController.update(title: title, body: body, entry: entry)
+            
+        default:
+            print("Unexpected Case in save button tapped")
         }
         
     }

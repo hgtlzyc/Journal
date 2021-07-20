@@ -12,6 +12,9 @@
 		7EDA1216259D233600BBD350 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDA1214259D233600BBD350 /* Main.storyboard */; };
 		7EDA1218259D233700BBD350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDA1217259D233700BBD350 /* Assets.xcassets */; };
 		7EDA121B259D233700BBD350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDA1219259D233700BBD350 /* LaunchScreen.storyboard */; };
+		E900654726A762EF005ACEB8 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900654626A762EF005ACEB8 /* Journal.swift */; };
+		E900654926A7642E005ACEB8 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900654826A7642E005ACEB8 /* JournalController.swift */; };
+		E900654B26A76DA2005ACEB8 /* JournalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900654A26A76DA2005ACEB8 /* JournalListViewController.swift */; };
 		E91D686026A60F4D00C97E47 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D685F26A60F4D00C97E47 /* Entry.swift */; };
 		E91D686226A60FBE00C97E47 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D686126A60FBE00C97E47 /* EntryController.swift */; };
 		E91D686526A6130800C97E47 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D686426A6130800C97E47 /* EntryListTableViewController.swift */; };
@@ -26,6 +29,9 @@
 		7EDA1217259D233700BBD350 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EDA121A259D233700BBD350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EDA121C259D233700BBD350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E900654626A762EF005ACEB8 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		E900654826A7642E005ACEB8 /* JournalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
+		E900654A26A76DA2005ACEB8 /* JournalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListViewController.swift; sourceTree = "<group>"; };
 		E91D685F26A60F4D00C97E47 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		E91D686126A60FBE00C97E47 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		E91D686426A6130800C97E47 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				E91D685F26A60F4D00C97E47 /* Entry.swift */,
+				E900654626A762EF005ACEB8 /* Journal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				E91D686126A60FBE00C97E47 /* EntryController.swift */,
+				E900654826A7642E005ACEB8 /* JournalController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -127,6 +135,7 @@
 		E91D685D26A60EEA00C97E47 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E900654A26A76DA2005ACEB8 /* JournalListViewController.swift */,
 				E91D686426A6130800C97E47 /* EntryListTableViewController.swift */,
 				E91D686626A6132B00C97E47 /* EntryDetailViewController.swift */,
 			);
@@ -210,11 +219,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E900654B26A76DA2005ACEB8 /* JournalListViewController.swift in Sources */,
 				E91D686026A60F4D00C97E47 /* Entry.swift in Sources */,
+				E900654926A7642E005ACEB8 /* JournalController.swift in Sources */,
 				E91D686526A6130800C97E47 /* EntryListTableViewController.swift in Sources */,
 				7EDA120F259D233600BBD350 /* AppDelegate.swift in Sources */,
 				E91D686226A60FBE00C97E47 /* EntryController.swift in Sources */,
 				E91D686726A6132B00C97E47 /* EntryDetailViewController.swift in Sources */,
+				E900654726A762EF005ACEB8 /* Journal.swift in Sources */,
 				7EDA1211259D233600BBD350 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

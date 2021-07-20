@@ -8,56 +8,21 @@
 import Foundation
 
 class EntryController {
-    // MARK: - Shared Instance
-    static let shared = EntryController()
-    
-    var entries: [Entry] = []
     
     // MARK: - CRUD Methods
-    func createEntryWith(title: String, body: String) {
+    static func createEntryWith(title: String, body: String, in journal: Journal) {
         let newEntry = Entry(title: title, text: body)
-        entries.append(newEntry)
-        saveToPersistentStorage()
+        JournalController.shared.addEntryTo(journal: journal, entry: newEntry)
     }
     
-    func delete(entry: Entry) {
-        guard let indexToDelete = entries.firstIndex(of: entry) else { return }
-        
-        entries.remove(at: indexToDelete)
-        saveToPersistentStorage()
+    static func update(title: String, body: String, entry: Entry){
+        entry.title = title
+        entry.text = body
+        JournalController.shared.saveToPersistentStorage()
     }
     
-    // MARK: - Data Persistance
-    func saveToPersistentStorage() {
-        let je = JSONEncoder()
-        
-        do {
-            let data = try je.encode(entries)
-            try data.write(to: fileURL())
-        } catch let e {
-            print(e.localizedDescription)
-        }
+    static func delete(entry: Entry, in journal: Journal) {
+        JournalController.shared.removeEntryFrom(journal: journal, entry: entry)
     }
-    
-    func loadFromPersistentStorage() {
-        let jd = JSONDecoder()
-        
-        do {
-            let data = try Data(contentsOf: fileURL())
-            entries = try jd.decode([Entry].self, from: data)
-        } catch let e {
-            print(e.localizedDescription)
-        }
-    }
-    
-    // MARK: - Make init private
-    private init() {}
-    
-    // MARK: - Helper
-    private func fileURL() -> URL {
-     let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-     let documentsDirectoryURL = urls[0].appendingPathComponent("Journal.json")
-     return documentsDirectoryURL
-    }
-    
+
 }

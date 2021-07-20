@@ -9,8 +9,8 @@ import Foundation
 
 class Entry: Codable {
     
-    let title: String
-    let text: String
+    var title: String
+    var text: String
     let timeStamp: Date
     
     init(title: String, text: String, timeStamp: Date = Date()) {
