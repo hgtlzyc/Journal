@@ -20,6 +20,9 @@ class EntryDetailViewController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleTextField.delegate = self
+        bodyTextView.delegate = self
+        
         updateViews()
     }
     
@@ -44,7 +47,9 @@ class EntryDetailViewController: UIViewController {
         }
         
         guard let title =  titleTextField.text,
-              let body = bodyTextView.text else { return }
+              let body = bodyTextView.text,
+              !title.isEmpty,
+              !body.isEmpty else { return }
         
         switch (entry, journal) {
         case let ( nil, journal? ):
@@ -59,4 +64,17 @@ class EntryDetailViewController: UIViewController {
         
     }
     
+}//End Of VC
+
+// MARK: - TextFieldDelegate
+
+extension EntryDetailViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        titleTextField.resignFirstResponder()
+        bodyTextView.resignFirstResponder()
+        
+        return true
+    }
 }
+
+
