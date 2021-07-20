@@ -9,14 +9,15 @@ import UIKit
 
 class EntryListTableViewController: UITableViewController {
 
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         EntryController.shared.loadFromPersistentStorage()
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.tableView.reloadData()
     }
 
@@ -26,7 +27,6 @@ class EntryListTableViewController: UITableViewController {
         return EntryController.shared.entries.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "entryCell", for: indexPath)
 

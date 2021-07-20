@@ -46,7 +46,7 @@ class EntryController {
             let data = try Data(contentsOf: fileURL())
             entries = try jd.decode([Entry].self, from: data)
         } catch let e {
-            print(e)
+            print(e.localizedDescription)
         }
     }
     
