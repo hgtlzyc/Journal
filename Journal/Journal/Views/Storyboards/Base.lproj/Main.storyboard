@@ -26,6 +26,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="342.66666666666669" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="textFieldChaned:" destination="Yhf-ZW-h6F" eventType="editingChanged" id="Z0I-qR-GCM"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfZ-eI-cNk">
                                                 <rect key="frame" x="0.0" y="42" width="342.66666666666669" height="34"/>
@@ -93,6 +96,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7MV-9R-vrZ"/>
                     <connections>
+                        <outlet property="createNewJournalButton" destination="TfZ-eI-cNk" id="Neb-h5-yv8"/>
                         <outlet property="journalListTableView" destination="MG1-KK-hxB" id="qhH-5x-lX6"/>
                         <outlet property="journalTitleTextField" destination="AVX-ZT-PD3" id="jNT-Zf-Axb"/>
                     </connections>
@@ -110,7 +114,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" textLabel="gTy-kI-Ogh" style="IBUITableViewCellStyleDefault" id="Zga-fb-oS0">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" textLabel="gTy-kI-Ogh" detailTextLabel="Fdr-Zq-uOV" style="IBUITableViewCellStyleValue1" id="Zga-fb-oS0">
                                 <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zga-fb-oS0" id="yt5-IV-sHa">
@@ -118,7 +122,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gTy-kI-Ogh">
-                                            <rect key="frame" x="20" y="0.0" width="388" height="43.666667938232422"/>
+                                            <rect key="frame" x="20" y="15" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fdr-Zq-uOV">
+                                            <rect key="frame" x="375.33333333333331" y="15" width="32.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>

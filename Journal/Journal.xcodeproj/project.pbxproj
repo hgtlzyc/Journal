@@ -15,6 +15,7 @@
 		E900654726A762EF005ACEB8 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900654626A762EF005ACEB8 /* Journal.swift */; };
 		E900654926A7642E005ACEB8 /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900654826A7642E005ACEB8 /* JournalController.swift */; };
 		E900654B26A76DA2005ACEB8 /* JournalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900654A26A76DA2005ACEB8 /* JournalListViewController.swift */; };
+		E900654D26A780B6005ACEB8 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900654C26A780B6005ACEB8 /* DateExtension.swift */; };
 		E91D686026A60F4D00C97E47 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D685F26A60F4D00C97E47 /* Entry.swift */; };
 		E91D686226A60FBE00C97E47 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D686126A60FBE00C97E47 /* EntryController.swift */; };
 		E91D686526A6130800C97E47 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D686426A6130800C97E47 /* EntryListTableViewController.swift */; };
@@ -32,6 +33,7 @@
 		E900654626A762EF005ACEB8 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		E900654826A7642E005ACEB8 /* JournalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
 		E900654A26A76DA2005ACEB8 /* JournalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListViewController.swift; sourceTree = "<group>"; };
+		E900654C26A780B6005ACEB8 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		E91D685F26A60F4D00C97E47 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		E91D686126A60FBE00C97E47 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		E91D686426A6130800C97E47 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		E91D685E26A60EFF00C97E47 /* Helper+Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E900654C26A780B6005ACEB8 /* DateExtension.swift */,
 			);
 			path = "Helper+Extensions";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E900654B26A76DA2005ACEB8 /* JournalListViewController.swift in Sources */,
+				E900654D26A780B6005ACEB8 /* DateExtension.swift in Sources */,
 				E91D686026A60F4D00C97E47 /* Entry.swift in Sources */,
 				E900654926A7642E005ACEB8 /* JournalController.swift in Sources */,
 				E91D686526A6130800C97E47 /* EntryListTableViewController.swift in Sources */,

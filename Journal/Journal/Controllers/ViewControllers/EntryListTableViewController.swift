@@ -31,8 +31,11 @@ class EntryListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "entryCell", for: indexPath)
 
         guard let journal = journal else { return cell }
-                
+        
+        let dateString = journal.entries[indexPath.row].timeStamp.getStringForm()
+        
         cell.textLabel?.text = journal.entries[indexPath.row].title
+        cell.detailTextLabel?.text = dateString
         
         return cell
     }

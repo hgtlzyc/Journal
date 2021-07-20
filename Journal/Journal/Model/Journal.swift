@@ -21,6 +21,7 @@ class Journal: Codable {
 
 }
 
+
 extension Journal: Equatable {
     static func == (lhs: Journal, rhs: Journal) -> Bool {
        return lhs.uuid == rhs.uuid
