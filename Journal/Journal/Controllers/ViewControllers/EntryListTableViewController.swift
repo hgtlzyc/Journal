@@ -35,8 +35,8 @@ class EntryListTableViewController: UITableViewController {
         let dateString = journal.entries[indexPath.row].timeStamp.getStringForm()
         
         cell.textLabel?.text = journal.entries[indexPath.row].title
-        cell.detailTextLabel?.text = dateString
         
+        cell.detailTextLabel?.text = dateString
         return cell
     }
     

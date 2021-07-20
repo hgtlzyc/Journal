@@ -44,11 +44,7 @@ class JournalListViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func createNewJournalButtonTapped(_ sender: Any) {
-        guard let title = journalTitleTextField.text, !title.isEmpty else { return }
-        JournalController.shared.createJournalWith(title: title)
-        journalTitleTextField.text = nil
-        journalTitleTextField.resignFirstResponder()
-        journalListTableView.reloadData()
+        saveFromTextField()
     }
     
     @IBAction func textFieldChaned(_ sender: Any) {
@@ -76,11 +72,23 @@ class JournalListViewController: UIViewController {
 
 extension JournalListViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        journalTitleTextField.resignFirstResponder()
+        saveFromTextField()
         return true
     }
 }
 
+// MARK: - Helper
+extension JournalListViewController {
+    func saveFromTextField() {
+        guard let title = journalTitleTextField.text, !title.isEmpty else { return }
+        JournalController.shared.createJournalWith(title: title)
+        journalTitleTextField.text = nil
+        journalTitleTextField.resignFirstResponder()
+    
+        journalListTableView.reloadData()
+    }
+    
+}
 
 // MARK: - Extension TableView Data Source
 extension JournalListViewController: UITableViewDataSource, UITableViewDelegate {
